@@ -18,7 +18,6 @@ type MessagePayload = Record<{
 
 const messageStorage = new StableBTreeMap<string, Message>(0, 44, 1024);
 
-/*
 $query;
 export function getMessages(): Result<Vec<Message>, string> {
   return Result.Ok<Vec<Message>,string>(messageStorage.values());
@@ -59,9 +58,6 @@ export function deleteMessage(id: string): Result<Message, string> {
     None: () => Result.Err<Message, string>("Message not found")
   });
 };
-
-*/
-
 
 globalThis.crypto = {
   // @ts-ignore
